@@ -1,12 +1,17 @@
 <template>
   <div class="wrapper" v-if="!isFetching" >
   
+
+      
       
       <div class="player-container" >
-        <vue-core-video-player :src="url" cover="video.thumb"></vue-core-video-player>
-        <!-- <vue-core-video-player src="`${$route.params.id}`"></vue-core-video-player> -->
+        <!--<vue-core-video-player :src="url" :cover="video.thumb"></vue-core-video-player> -->
+         <video controls :src="url" :poster="video.thumb" width="640">
+          Sorry, your browser doesn't support embedded videos
+        </video>
       </div>
 
+     
 
   </div>
 </template>
@@ -141,10 +146,9 @@ export default {
 .wrapper {
   width: 50%;
   display: flex;
-
-  
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 </style>

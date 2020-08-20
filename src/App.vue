@@ -48,6 +48,7 @@ export default {
 .outerWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
 }
   .fade-enter-active,
   .fade-leave-active {

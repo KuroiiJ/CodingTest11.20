@@ -52,25 +52,21 @@ export default {
     justify-content: space-between;
     padding: 10px;
     border-bottom-style: solid;
-    border-color: rgb(218, 216, 216);
+    border-color: #edeff0;
     text-decoration: none;
 }
 
 
 .navItem :hover :active{
-    background-color: lightblue;
+    background-color:  #d4e2fe;
     
 }
 
 h2, h2:link, h2:visited {
+    font-size: 16px;
     text-align: left;
     color: black;
-    text-decoration: none;
     
-}
-
-.time {
-    text-align: right;
 }
 
 </style>
