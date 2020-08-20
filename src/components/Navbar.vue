@@ -145,11 +145,12 @@ export default {
   margin-right: 25px;
 }
 
+
+
 .nav {
-    position: fixed;
     top: 0;
     height: 100%;
-    width: 50%;
+    width: 100%;
     background-color:white;
     border-bottom-style: outset;
     border-bottom-color: hsla(0, 100%, 50%, 0.3);;
@@ -161,7 +162,9 @@ export default {
 
 a {
   opacity: 1;
+  text-decoration: none;
 }
+
 
 .nav a:hover {
   background-color: lightblue;

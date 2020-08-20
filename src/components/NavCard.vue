@@ -1,5 +1,5 @@
 <template>
-<router-link :to="`/video/${video.url}`">
+<router-link :to="`/video/${video.title}`">
     <div class="box">
         
             <div class="navItem">
@@ -10,6 +10,7 @@
     </div> 
 </router-link>  
 </template>
+
 
 <script>
 export default {
