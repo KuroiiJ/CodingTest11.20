@@ -173,5 +173,6 @@ a {
 
 h1 {
   text-align: left;
+  font-size: 24px;
 }
 </style>

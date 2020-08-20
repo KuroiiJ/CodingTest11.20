@@ -33,33 +33,23 @@ export default {
 
 <style>
 #app {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-  background: rgb(241, 234, 236); */
-   background: gainsboro;
+  display: flex;
+  justify-content: center;
+   margin-top: 20px;
+   background: darkgrey;
+   height: 1000px;
+
 }
 
 .outerWrapper {
+  width: 900px;
+  height: 500px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  background: gainsboro;
 }
-  .fade-enter-active,
-  .fade-leave-active {
-    transition-duration: 0.3s;
-    transition-property: opacity;
-    transition-timing-function: ease;
-  }
-
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0
-  }
+ .box {
+ }
 
 </style>

@@ -6,8 +6,8 @@
       
       <div class="player-container" >
         <!--<vue-core-video-player :src="url" :cover="video.thumb"></vue-core-video-player> -->
-         <video controls :src="url" :poster="video.thumb" width="640">
-          Sorry, your browser doesn't support embedded videos
+         <video controls :src="url" :poster="video.thumb" width="500">
+          Sorry, your browser doesn't support embedded videos! 
         </video>
       </div>
 
@@ -139,15 +139,13 @@ export default {
 
 
 .player-container {
-  width: 500px;
-  height: auto;
 }
 
 .wrapper {
-  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: nowrap;
+  
   justify-content: center;
 }
 
