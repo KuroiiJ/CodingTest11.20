@@ -1,10 +1,10 @@
 <template>
   <div class="nav">
     <h1>ThankView Walkthrough</h1>
-    <h3> Total: {{totalTime}} <!-- TotalTime TBD --> </h3>
+    <h3> Total: {{minutes}}m  {{seconds}}s <!-- TotalTime TBD --> </h3>
     <nav class="wrapper">
       <div class="links" v-for="(video, index) in links" v-bind:key="index">
-        <NavCard :video=video :key=index />
+        <NavCard :video=video :num=index />
       </div>
       
     </nav>
@@ -21,6 +21,8 @@ export default {
   },
   data() {
     return {
+      minutes: null,
+      seconds: null,
       links: 
         [{
             "title": "Creating a Campaign",
@@ -113,35 +115,26 @@ export default {
             "url": "https://assets.thankview.com/assets/videos/walkthrough/15_Manage_Users.mp4",
             "thumb": "https://assets.thankview.com/assets/videos/thumbnails/15.jpg"
         }]
-      // [
-      //   {
-      //     id: 0,
-      //     text: 'Hello World',
-      //     page:'/projects'
-      //   },
-      //   {
-      //     id: 1,
-      //     text: 'Home',
-      //     page:'/home'
-      //   },
-      //   {
-      //     id: 2,
-      //     text: 'About',
-      //     page:'/about'
-      //   },
-      //   {
-      //     id: 3,
-      //     text: 'Contact',
-      //     page:'/contact'
-      //   }
-      // ]
-
-
-
-
-
     }
   },
+  methods: {
+    getTotalTime: function () {
+      this.minutes = 0
+      this.seconds = 0
+
+
+      this.links.map(x => (this.seconds += x.seconds))
+      this.minutes += Math.floor(this.seconds/60) 
+      this.seconds = this.seconds - (this.minutes*60)
+
+      this.links.map(x => (this.minutes += x.minutes))
+
+  
+    }
+  },
+  mounted: function () {
+    this.getTotalTime()
+  }
 
 }
 </script>

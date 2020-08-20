@@ -13,7 +13,7 @@ export default {
     name: 'NavCard',
     props: {
         video: Object,
-        key: Number
+        num: Number
     }
 }
 </script>
@@ -27,11 +27,11 @@ export default {
 .navItem {
     padding: 10px;
     border-bottom-style: solid;
-    border-color: darkgray;
+    border-color: rgb(218, 216, 216);
 }
 
 
-.navItem :hover{
+.navItem :hover :active{
     background-color: lightblue;
     
 }
@@ -51,16 +51,3 @@ h2, h2:link, h2:visited {
 
 
 
-
-
-
-
-
-
-
-
-
-
-<router-link class="spacing" v-for="video in links" 
-      v-bind:key="video.id"
-      :to="video.url">{{video.title}}</router-link>

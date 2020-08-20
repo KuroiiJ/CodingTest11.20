@@ -10,8 +10,7 @@ export default new Router({
   routes: [
     {
       path: "/video/:src",
-      component: HelloWorld,
-      props: true
+      component: HelloWorld
     }
   ]
 });

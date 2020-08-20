@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
    
-    <div class="column">
+
       <h2>TEST {{src}}</h2>
       <div class="player-container">
         <vue-core-video-player src="`${$route.params.id}`"></vue-core-video-player>
       </div>
-    </div>
+
 
   </div>
 </template>
@@ -16,6 +16,14 @@ export default {
   name: 'HelloWorld',
   props: {
     src: String
+  },
+  methods: {
+    checkParams: function () {
+      console.log("sadf", this.route.params)
+    }
+  },
+  mounted : function () {
+    this.checkParams()
   }
 }
 </script>
