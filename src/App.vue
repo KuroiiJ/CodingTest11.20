@@ -43,6 +43,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding-bottom: 1000px;
+  background: lightpink;
+  width: 100%;
 }
 
   .fade-enter-active,
@@ -58,8 +61,8 @@ export default {
   }
 
   .main {
-    background: lightpink;
-    margin-top: 120px;
+    
+    margin-top: 125px;
 
   }
 </style>

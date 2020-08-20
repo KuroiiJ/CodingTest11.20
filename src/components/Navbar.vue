@@ -44,20 +44,27 @@ export default {
 
 <style>
 .spacing {
-  margin-right: 10px;
+  margin-right: 25px;
 }
 
 .nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: lightgray;
+    background-color:hsla(0, 100%, 70%, 0.3);
+    border-bottom-style: outset;
+    border-bottom-color: hsla(0, 100%, 50%, 0.3);;
     overflow: hidden;
     padding-bottom: 30px;
+}
+
+a {
+  opacity: 1;
 }
 
 .nav a:hover {
   background-color: darkgray;
   color: black;
+  
 }
 </style>
