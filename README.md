@@ -1,5 +1,6 @@
 # My-Vue-Starting-Point
-Just a repo to hold for me to use when I want to make a new Vue app! It's thestandard Vue app, but with Vue Router added and a quick and very ugle navbar built in.
+Attempting the coding challege for ThankView on 11/20. Unsuccessful by deadline, but I'm gonna keep working on it, because I got very stuck on a silly problems and wasted too much time. 
+
 
 ## Project setup
 ```
