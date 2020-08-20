@@ -1,20 +1,42 @@
 <template>
+<router-link :to="`/video/${video.url}`">
     <div class="box">
-        <router-link :to="`/video/${video.url}`">
+        
             <div class="navItem">
-                <h2>{{video.title}} <span class="time">{{video.minutes}}m {{video.seconds}}s</span></h2>
+                <h2>{{video.title}} </h2>
+                <h2>{{video.minutes}}m {{video.seconds}}s</h2>
             </div>
-        </router-link>
-    </div>   
+        
+    </div> 
+</router-link>  
 </template>
 
 <script>
 export default {
     name: 'NavCard',
     props: {
-        video: Object,
-        num: Number
-    }
+        video: Object
+    },
+    // data() {
+    //     return {
+    //         num: null
+    //     }
+    // },
+    // methods: {
+    //     getNumber: function () {
+    //         let link = this.video.url 
+    //         this.num = ''
+    //         for(let i=55; i<link.length; i++){
+    //             console.log(link[i])
+    //             if(typeof link[i] === 'number') {this.num += link[i].toString()}
+    //             else break
+    //         }
+    //         return this.num
+    //     }
+    // },
+    // mounted: function() {
+    //     this.getNumber()
+    // }
 }
 </script>
 
@@ -25,9 +47,12 @@ export default {
 }
 
 .navItem {
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     border-bottom-style: solid;
     border-color: rgb(218, 216, 216);
+    text-decoration: none;
 }
 
 

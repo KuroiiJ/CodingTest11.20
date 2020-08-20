@@ -144,9 +144,7 @@ export default {
 .spacing {
   margin-right: 25px;
 }
-.wrapper {
-  overflow: scroll;
-}
+
 .nav {
     position: fixed;
     top: 0;
@@ -155,10 +153,10 @@ export default {
     background-color:white;
     border-bottom-style: outset;
     border-bottom-color: hsla(0, 100%, 50%, 0.3);;
-    overflow: hidden;
     padding-bottom: 30px;
     padding-top: 20px;
     padding-left: 20px;
+    overflow: scroll;
 }
 
 a {
