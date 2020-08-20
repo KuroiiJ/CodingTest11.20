@@ -1,5 +1,5 @@
 # My-Vue-Starting-Point
-Attemptinng the coding challege for ThankView on 11/20. Unsuccessful by deadline, but I'm gonna keep working on it, because I got very stuck on a silly v-bind problem and wasted too much time. 
+Attempting the coding challege for ThankView on 11/20. Unsuccessful by deadline, but I'm gonna keep working on it, because I got very stuck on a silly problems and wasted too much time. 
 
 
 ## Project setup
