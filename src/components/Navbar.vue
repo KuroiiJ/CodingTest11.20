@@ -1,10 +1,10 @@
 <template>
   <div class="nav">
     <h1>ThankView Walkthrough</h1>
-    <h4> Total: {{totalTime}} </h4>
+    <h3> Total: {{totalTime}} <!-- TotalTime TBD --> </h3>
     <nav class="wrapper">
       <div class="links" v-for="(video, index) in links" v-bind:key="index">
-        <NavCard :video=video :key=key />
+        <NavCard :video=video :key=index />
       </div>
       
     </nav>
@@ -151,7 +151,9 @@ export default {
 .spacing {
   margin-right: 25px;
 }
-
+.wrapper {
+  overflow: scroll;
+}
 .nav {
     position: fixed;
     top: 0;
@@ -162,6 +164,8 @@ export default {
     border-bottom-color: hsla(0, 100%, 50%, 0.3);;
     overflow: hidden;
     padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 a {

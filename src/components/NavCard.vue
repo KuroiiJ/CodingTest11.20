@@ -1,12 +1,11 @@
 <template>
-
-<router-link v-bind:key="video.title" :to="video.url">
-    <div class="navItem">
-        <h2>{{key}}. {{video.title}} <span class="time">{{video.minutes}}m {{video.seconds}}s</span></h2>
-        {{video}}
-    </div>
-</router-link>
-    
+    <div class="box">
+        <router-link :to="`/video/${video.url}`">
+            <div class="navItem">
+                <h2>{{video.title}} <span class="time">{{video.minutes}}m {{video.seconds}}s</span></h2>
+            </div>
+        </router-link>
+    </div>   
 </template>
 
 <script>
@@ -20,12 +19,28 @@ export default {
 </script>
 
 <style scoped>
-.navItem :hover{
+
+.box :hover{
     background-color: lightblue;
 }
 
-h2 {
+.navItem {
+    padding: 10px;
+    border-bottom-style: solid;
+    border-color: darkgray;
+}
+
+
+.navItem :hover{
+    background-color: lightblue;
+    
+}
+
+h2, h2:link, h2:visited {
     text-align: left;
+    color: black;
+    text-decoration: none;
+    
 }
 
 .time {

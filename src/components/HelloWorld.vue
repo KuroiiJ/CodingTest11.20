@@ -2,8 +2,9 @@
   <div class="wrapper">
    
     <div class="column">
+      <h2>TEST {{src}}</h2>
       <div class="player-container">
-        <vue-core-video-player src="https://assets.thankview.com/assets/videos/walkthrough/1_Creating_A_Campaign.mp4"></vue-core-video-player>
+        <vue-core-video-player src="`${$route.params.id}`"></vue-core-video-player>
       </div>
     </div>
 
