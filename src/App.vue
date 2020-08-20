@@ -8,7 +8,7 @@
       </div>
 
       <div class="box">
-          <HelloWorld />
+          <router-view :key="$route.fullPath" />
       </div>
 
   </div>
@@ -21,14 +21,13 @@
 
 <script>
 import Navbar from './components/Navbar'
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    HelloWorld
-  }
+    Navbar
+  },
+  
 }
 </script>
 

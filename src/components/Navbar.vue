@@ -1,12 +1,11 @@
 <template>
   <div class="nav">
-    <h1>ThankView Walkthrough</h1>
+    <h1>ThankView Walkthrough</h1> 
     <h3> Total: {{minutes}}m  {{seconds}}s <!-- TotalTime TBD --> </h3>
     <nav class="wrapper">
       <div class="links" v-for="(video, index) in links" v-bind:key="index">
         <NavCard :video=video :num=index />
       </div>
-      
     </nav>
   </div>
 </template>
