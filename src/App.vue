@@ -2,20 +2,19 @@
   <div id="app">
   
   <!-- router - links are currently all in the navbar -->
-  <Navbar />
+  <div class="boxA">
+    <Navbar />
+  </div>
 
 
-  <div class="main">
-    <!-- <transition
+  <div class="boxB">
+    <transition
         name="fade"
         mode="out-in"
-      > -->
-    
+      >
+      <router-view />
 
-    <!-- View matching current router-links will render here -->
-    <router-view />
-
-    <!-- </transition> -->
+    </transition>
   </div>
 
 
@@ -37,15 +36,15 @@ export default {
 
 <style>
 #app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  padding-bottom: 1000px;
-  background: lightpink;
-  width: 100%;
+  background: rgb(241, 234, 236);
 }
 
   .fade-enter-active,
@@ -60,7 +59,7 @@ export default {
     opacity: 0
   }
 
-  .main {
+  .boxB {
     
     margin-top: 125px;
 

@@ -9,24 +9,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: HelloWorld
-    },
-    {
-      path: "/contact",
-      name: "contact",
-      component: HelloWorld
-    },
-    {
-      path: "/about",
-      name: "about",
-      component: HelloWorld
-    },
-    {
-      path: "/projects",
-      name: "projects",
-      component: HelloWorld
+      path: "/video/:src",
+      component: HelloWorld,
+      props: true
     }
   ]
 });
