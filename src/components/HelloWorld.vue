@@ -2,13 +2,15 @@
   <div class="wrapper" v-if="!isFetching" >
   
 
-      
+    
       
       <div class="player-container" >
         <!--<vue-core-video-player :src="url" :cover="video.thumb"></vue-core-video-player> -->
-         <video controls :src="url" :poster="video.thumb" width="500">
+         <video controls :src="url" :poster="video.thumb"  v-on:ended="playNext"  width="435">
           Sorry, your browser doesn't support embedded videos! 
         </video>
+
+        
       </div>
 
      
@@ -25,6 +27,7 @@ export default {
       isFetching: true,
       video: null,
       url: null,
+      nextVideo: null,
       links: 
         [{
             "title": "Creating a Campaign",
@@ -122,11 +125,29 @@ export default {
 
   methods: {
     checkParams: function () {
-      this.video = this.links.filter(vid => vid.title == this.$route.params.id )
-      this.video = this.video[0]
-      this.url = this.video.url
-      this.isFetching = false
+      for(let i=0; i<this.links.length; i++) {
+        
+        if(this.links[i].title == this.$route.params.id){
+          console.log(this.links[i])
+          this.video = this.links[i]
+
+          if(i === this.links.length-1) {this.nextVideo = this.links[0]}
+          else {this.nextVideo = this.links[i+1]}
+
+          break;
+        }
+
+      
+      }
+        this.url = this.video.url
+        this.isFetching = false
+    
+    },
+    playNext: function () {
+      this.$router.push(this.nextVideo.title)
     }
+
+
   },
   mounted : function () {
     this.checkParams()
@@ -134,19 +155,16 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
 
 
-.player-container {
-}
+<style>
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  
+  align-items: center;
   justify-content: center;
+  align-content: center;
 }
 
 </style>

@@ -43,8 +43,8 @@ export default {
 
 <style scoped>
 
-.box :hover{
-    background-color: lightblue;
+.box :hover {
+    background-color: #d4e2fe;
 }
 
 .navItem {
@@ -56,11 +56,6 @@ export default {
     text-decoration: none;
 }
 
-
-.navItem :hover :active{
-    background-color:  #d4e2fe;
-    
-}
 
 h2, h2:link, h2:visited {
     font-size: 16px;

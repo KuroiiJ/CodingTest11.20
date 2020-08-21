@@ -11,6 +11,9 @@ export default new Router({
     {
       path: "/video/:id",
       component: HelloWorld
+    },
+    {
+      path: '/', redirect: 'video/Creating%20a%20Campaign'
     }
   ]
 });

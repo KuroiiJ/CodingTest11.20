@@ -1,8 +1,10 @@
 <template>
   <div class="nav">
-    <h1>ThankView Walkthrough</h1> 
-    <h3> Total: {{minutes}}m  {{seconds}}s <!-- TotalTime TBD --> </h3>
-    <nav class="wrapper">
+    <div class="heading">
+      <h1>ThankView Walkthrough</h1> 
+      <h3> Total: {{minutes}}m  {{seconds}}s <!-- TotalTime TBD --> </h3>
+    </div>
+    <nav class="linkWrapper">
       <div class="links" v-for="(video, index) in links" v-bind:key="index">
         <NavCard :video=video :num=index />
       </div>
@@ -148,16 +150,18 @@ export default {
 
 .nav {
     top: 0;
-    height: 100%;
+    height: 95%;
     width: 100%;
     background-color:white;
     border-bottom-style: outset;
-    border-bottom-color: hsla(0, 100%, 50%, 0.3);;
-    padding-bottom: 30px;
     padding-top: 20px;
     padding-left: 20px;
     overflow: scroll;
+    
 }
+
+
+
 
 a {
   opacity: 1;

@@ -48,6 +48,7 @@ export default {
   justify-content: space-between;
   align-items: stretch;
   background: gainsboro;
+  border-style: outset;
 }
  .box {
  }
